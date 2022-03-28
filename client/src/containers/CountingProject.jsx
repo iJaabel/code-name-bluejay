@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { ClearButton, CountingButton, Debugger, Heading } from "../components"
 
 export default () => {
