@@ -1,11 +1,11 @@
-import React from "react";
+import { Outlet } from "react-router-dom"
 import './App.css';
-import { CountingProject } from "../containers"
 
 export default function App() {
+
   return (
-    <div className="App">
-      <CountingProject />
-    </div>
+    <main className="App">
+      <Outlet />
+    </main>
   );
 }

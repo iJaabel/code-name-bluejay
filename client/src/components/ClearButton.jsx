@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default ({ setCount, setLog }) => (
     <div>
         <button
@@ -12,4 +10,3 @@ export default ({ setCount, setLog }) => (
         </button>
     </div>
 )
-

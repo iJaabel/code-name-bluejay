@@ -1,1 +1,5 @@
 export { default as CountingProject } from "./CountingProject"
+export { default as Login } from "./Login"
+export { default as Registration } from "./Registration"
+export { default as LinksMap } from "./LinksMap"
+export { default as Unauthorized } from "./Unauthorized"

@@ -1,5 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { App } from './app';
+import { StrictMode as Strict } from 'react';
+import { render } from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { App, AuthProvider } from './app';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+render(
+    <Strict>
+        <Router>
+            <AuthProvider>
+                <App />
+            </AuthProvider>
+        </Router>
+    </Strict>,
+    document.getElementById('root')
+);
