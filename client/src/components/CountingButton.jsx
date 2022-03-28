@@ -4,10 +4,12 @@ export default ({ toggle, setLog, count, isHovering }) => (
     <div>
         <button
             className="hoverBtn"
-            onMouseEnter={toggle}
+            onMouseEnter={() => {
+                toggle()
+            }}
             onMouseLeave={() => {
                 toggle();
-                setLog((prevLog) => [...prevLog, `\n hover lap times ${count + 1} `]);
+                setLog((prevLog) => [...prevLog, `\n hover lap times ${count} `]);
             }}
         >
             {isHovering
@@ -16,4 +18,3 @@ export default ({ toggle, setLog, count, isHovering }) => (
         </button>
     </div>
 )
-

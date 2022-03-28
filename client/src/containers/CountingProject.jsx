@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { ClearButton, CountingButton, Debugger, Heading } from "../components"
 
 export default () => {
@@ -8,16 +8,15 @@ export default () => {
 
     const toggle = () => setHovering(!isHovering);
 
-    const counting = useCallback(() => {
-        //rewrite this to work as a loop...
-        setTimeout(() => {
-            setCount((prevCount) => prevCount + 1);
-        }, 50);
-    });
-
     useEffect(() => {
-        if (isHovering) counting();
-    }, [isHovering, counting]);
+        let counter = null
+        if (isHovering) {
+            counter = setInterval(() => {
+                setCount((prevCount) => ++prevCount);
+            }, 50)
+        }
+        return () => clearInterval(counter)
+    }, [isHovering])
 
     return (
         <div>
