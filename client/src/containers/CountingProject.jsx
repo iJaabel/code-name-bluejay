@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { ClearButton, CountingButton, Debugger, Heading } from "../components"
+import { useState, useEffect } from 'react'
+import { Debugger, Heading, ConditionalButton } from "../components"
 
 export default () => {
     const [isHovering, setHovering] = useState(false);
@@ -19,11 +19,11 @@ export default () => {
     }, [isHovering])
 
     return (
-        <div>
+        <section>
             <Heading />
-            <CountingButton toggle={toggle} setLog={setLog} count={count} isHovering={isHovering} />
-            <ClearButton setCount={setCount} setLog={setLog} />
+            <ConditionalButton toggle={toggle} setLog={setLog} count={count} isHovering={isHovering} />
+            <ConditionalButton setCount={setCount} setLog={setLog} />
             <Debugger isHovering={isHovering} log={log} />
-        </div>
+        </section>
     )
 }
