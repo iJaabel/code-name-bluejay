@@ -1,7 +1,6 @@
 import React from 'react'
 
-export default ({ setCount, setLog }) =>
-(
+export default ({ setCount, setLog }) => (
     <div>
         <button
             onClick={() => {

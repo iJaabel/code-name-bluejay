@@ -23,7 +23,7 @@ export default () => {
         <div>
             <Heading />
             <CountingButton toggle={toggle} setLog={setLog} count={count} isHovering={isHovering} />
-            <ClearButton setCount={count} setLog={setLog} />
+            <ClearButton setCount={setCount} setLog={setLog} />
             <Debugger isHovering={isHovering} log={log} />
         </div>
     )
